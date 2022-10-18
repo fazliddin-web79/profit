@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import HomeBody from "../homeBody";
 import HomeMenuNav from "../homeMainNav";
 import "./style.css";
 
 const Navbar = () => {
+  const location = useLocation();
   const [mode, setMode] = useState(true);
   const [fixed, setFixed] = useState(true);
   const body = document.querySelector("body");
@@ -456,10 +458,10 @@ const Navbar = () => {
               </svg>
             </div>
           </div>
-          <HomeMenuNav />
+          {location.pathname === "/" && <HomeMenuNav />}
         </div>
       </main>
-      <HomeBody />
+      <Outlet />
       <div className="footer">
         <footer className="container">
           <div className="foot-box foot-box-1">
