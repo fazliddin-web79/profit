@@ -1067,6 +1067,7 @@ nav {
   font-size: 20px;
   position: relative;
 }
+
 @media screen and (max-width: 1000px) {
   .hero-nav-mobile,
   .hero-nav-mobile-2 {
@@ -1339,4 +1340,10 @@ nav {
   color: #fff;
   border-radius: 3px;
   background-color: rgba(128, 128, 128, 0.6);
+}
+
+@media screen and (max-width: 600px) {
+  .hero-nav-mobile-2 {
+    display: none;
+  }
 }
